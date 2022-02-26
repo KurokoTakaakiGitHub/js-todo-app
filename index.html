@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>todo-js</title>
+    <meta charset="UTF-8" />
+  </head>
 
-<head>
-	<title>todo-js</title>
-	<meta charset="UTF-8" />
-</head>
+  <body>
+    <div calss="input-area">
+      <input id="add-text" placeholder="TODO入力" />
+      <button id="add-button">追加</button>
+    </div>
 
-<body>
-	<div　calss="input-area" >
-		<input placeholder="TODO入力"/>
-		<button>追加</button>
-	</div>	
-	<div calss="imcomplete-area">
-		<p>未完了のTODO</p>
-		<ul>
-			<li>TODOです</li>
-			<button>完了</button>
-			<button>削除</button>
-		</ul>
-	</div>
-	<div calss="complete-area">
-		<p>完了したTODO</p>
-		<ul>
-			<li>TODOでした</li>
-			<button>戻す</button>
-		</ul>
-	</div>
-	<script src="src/index.js">
-	</script>
-</body>
+    <div calss="imcomplete-area">
+      <p class="title">未完了のTODO</p>
+      <ul id="incomplete-list">
+        <div class="list-row">
+          <li>TODOです</li>
+          <button>完了</button>
+          <button>削除</button>
+        </div>
+        <div class="list-row">
+          <li>TODOです</li>
+          <button>完了</button>
+          <button>削除</button>
+        </div>
+      </ul>
+    </div>
 
+    <div calss="complete-area">
+      <p class="title">完了したTODO</p>
+      <ul>
+        <div class="list-row">
+          <li>TODOでした</li>
+          <button>戻す</button>
+        </div>
+      </ul>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
 </html>
