@@ -18,6 +18,25 @@ const onClickAdd = () => {
 
   // listの子要素にdivを追加
   document.getElementById("incomplete-list").appendChild(div);
+
+  // button(完了)生成
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "完了";
+  completeButton.addEventListener("click", () => {
+    alert("完了")
+  });
+
+  // button(削除)生成
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "削除";
+  deleteButton.addEventListener("click", () => {
+    alert("削除")
+  });
+
+
+  // divの子要素にbuttonを追加
+  div.appendChild(completeButton);
+  div.appendChild(deleteButton);
 };
 
 document
