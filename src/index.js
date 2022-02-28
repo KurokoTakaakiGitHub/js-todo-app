@@ -23,20 +23,26 @@ const onClickAdd = () => {
   const completeButton = document.createElement("button");
   completeButton.innerText = "完了";
   completeButton.addEventListener("click", () => {
-    alert("完了")
+    // 押された完了ボタンの親タグを取得して未完了リストから削除
+    deleteFromIncompleteList(completeButton.parentNode);
   });
 
   // button(削除)生成
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "削除";
   deleteButton.addEventListener("click", () => {
-    alert("削除")
+    // 押された削除ボタンの親タグを取得して未完了リストから削除
+    deleteFromIncompleteList(deleteButton.parentNode);
   });
-
 
   // divの子要素にbuttonを追加
   div.appendChild(completeButton);
   div.appendChild(deleteButton);
+};
+
+// 未完了リストから削除
+const deleteFromIncompleteList = (target) => {
+  document.getElementById("incomplete-list").removeChild(target);
 };
 
 document
